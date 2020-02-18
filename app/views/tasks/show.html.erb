@@ -1,0 +1,10 @@
+<p>Task:</p>
+
+<p> <%= @task.title %> </p>
+<p> <%= @task.details %> </p>
+<%= link_to edit_task_path do %>
+
+<i class="fas fa-pencil-alt"></i>
+<% end %>
+<p>Edit Task</p>
+<%= link_to 'back', tasks_path, class: 'btn btn-primary' %>

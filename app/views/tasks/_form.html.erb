@@ -1,0 +1,19 @@
+<%= form_for @task do |f| %>
+  <div class="form">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form">
+    <%= f.label :details %>
+    <%= f.text_field :details, class: 'form-control' %>
+  </div>
+  <% if @task.id %>
+    <div class="form">
+      <%= f.label :completed %>
+      <%= f.check_box :completed %>
+    </div>
+  <% end %>
+  <div class="form">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>
